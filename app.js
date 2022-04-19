@@ -1,19 +1,21 @@
 
 function run() {
-
+    getCardComp()
     getCard()
 }
 
-function getCard() {
+function getCardHuman() {
     var num = Math.floor(Math.random() * 10) + 1
     var suitArray = ["C", "D", "H", "S"]
     var randomSuit = Math.floor(Math.random() * 4)
-    document.getElementById("card").insertAdjacentHTML("beforeend", "<img src=images/" + num + suitArray[randomSuit] + ".jpg>")
+    document.getElementById("cardh").insertAdjacentHTML("beforeend", "<img src=images/" + num + suitArray[randomSuit] + ".jpg>")
 }
 
-function randNum() {
-    var num = (Math.floor(Math.random() * 10) + 1)
-    return num
+function getCardComp() {
+    var num = Math.floor(Math.random() * 10) + 1
+    var suitArray = ["C", "D", "H", "S"]
+    var randomSuit = Math.floor(Math.random() * 4)
+    document.getElementById("cardc").insertAdjacentHTML("beforeend", "<img src=images/" + num + suitArray[randomSuit] + ".jpg>")
 }
 
 function user(number) {
