@@ -1,7 +1,17 @@
+var maybe = 0
 
 function run() {
-    getCardComp()
-    getCard()
+    let h = document.getElementById("hscore");
+    var number = getCardHuman()
+    maybe += number
+    h.innerHTML = "The card was " + number + ". Your total is " + maybe + "."
+}
+
+function humanChange() {
+    let h = document.getElementById("hscore");
+    var number = getCardHuman()
+    maybe += number
+    h.innerHTML = "The card was " + number + ". Your total is " + maybe + "."
 }
 
 function getCardHuman() {
@@ -9,6 +19,7 @@ function getCardHuman() {
     var suitArray = ["C", "D", "H", "S"]
     var randomSuit = Math.floor(Math.random() * 4)
     document.getElementById("cardh").insertAdjacentHTML("beforeend", "<img src=images/" + num + suitArray[randomSuit] + ".jpg>")
+    return num
 }
 
 function getCardComp() {
